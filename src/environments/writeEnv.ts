@@ -7,15 +7,14 @@ const setEnv = () => {
   });
   // `environment.ts` file structure
   const envConfigFile = `export const environment = {
-
+    production: false,
     firebase: {
       projectId: '${process.env["FB_PROJECT_ID"]}',
       appId: '${process.env["FB_APP_ID"]}',
-      databaseURL: 'https://glimm-6e33c-default-rtdb.europe-west1.firebasedatabase.app',
+      databaseURL: 'https://fir-403c4-default-rtdb.europe-west1.firebasedatabase.app',
       storageBucket: '${process.env["FB_STORAGE_BUCKET"]}',
-      locationId: 'europe-west2',
       apiKey: '${process.env["FB_API_KEY"]}',
-      authDomain: 'glimm-6e33c.firebaseapp.com',
+      authDomain: '${process.env['FB_AUTH_DOMAIN']}',
       messagingSenderId: '${process.env["FB_MESSAGGING_SENDER_ID"]}',
     },
 };

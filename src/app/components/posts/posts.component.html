@@ -1,0 +1,14 @@
+<div class="post" *ngFor="let item of posts">
+  <span (click)="handleEdit(item)">EDIT</span>
+  <span  (click)="deletePost(item.id)">DELETE</span>
+  <img [src]="item.url" alt="">
+  <p>{{item.text}}</p>
+</div>
+<form (submit)="submitPost()">
+  <input type="text" name="text" [(ngModel)]="text">
+  <input type="file" name="img" (change)="handleFile($event)">
+</form>
+<h1>EDIT FORM</h1>
+<form (submit)="editPost()">
+  <input type="text" name="text" [(ngModel)]="textEdit">
+</form>

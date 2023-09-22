@@ -3,11 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "npm run config && ng serve -o",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "config": "ts-node ./src/environments/writeEnv.ts"
+    "config": "ts-node ./src/environments/writeEnv.ts",
+    "reset": "rm -rf node_modules && rm -rf package-lock.json && npm cache clean --force && npm i @angular/fire && npm i rxfire@6.0.3 && npm i "
   },
   "private": true,
   "dependencies": {
@@ -21,7 +22,7 @@
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
     "dotenv": "^16.3.1",
-    "firebase": "^10.4.0",
+    "rxfire": "^6.0.3",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
